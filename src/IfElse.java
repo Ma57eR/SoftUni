@@ -120,24 +120,72 @@ public class IfElse
         //-----------6та задача--------------
 
 
-        String figure = scanner.nextLine();
+//        String figure = scanner.nextLine();
+//
+//        if (figure.equals("square")) {
+//            double lenght = Double.parseDouble(scanner.nextLine());
+//            System.out.printf("%.3f", lenght*lenght);
+//        } else if (figure.equals("rectangle")) {
+//            double recLength = Double.parseDouble(scanner.nextLine());
+//            double recWidth = Double.parseDouble(scanner.nextLine());
+//            System.out.printf("%.3f", recLength * recWidth);
+//        } else if (figure.equals("circle")) {
+//            double cirRadius = Double.parseDouble(scanner.nextLine());
+//            System.out.printf("%.3f",Math.PI * (cirRadius * cirRadius));
+//        } else if (figure.equals("triangle")) {
+//            double triX = Double.parseDouble(scanner.nextLine());
+//            double triY = Double.parseDouble(scanner.nextLine());
+//            System.out.printf("%.3f", (triX * triY)/2);
+//        }
 
-        if (figure.equals("square")) {
-            double lenght = Double.parseDouble(scanner.nextLine());
-            System.out.printf("%.3f", lenght*lenght);
-        } else if (figure.equals("rectangle")) {
-            double recLength = Double.parseDouble(scanner.nextLine());
-            double recWidth = Double.parseDouble(scanner.nextLine());
-            System.out.printf("%.3f", recLength * recWidth);
-        } else if (figure.equals("circle")) {
-            double cirRadius = Double.parseDouble(scanner.nextLine());
-            System.out.printf("%.3f",Math.PI * (cirRadius * cirRadius));
-        } else if (figure.equals("triangle")) {
-            double triX = Double.parseDouble(scanner.nextLine());
-            double triY = Double.parseDouble(scanner.nextLine());
-            System.out.printf("%.3f", (triX * triY)/2);
+        //-----------7ма задача--------------
+
+
+//        double travelPrice = Double.parseDouble(scanner.nextLine());
+//        double puzzlePrice = 2.60;
+//        double toyPrice = 3;
+//        double bearPrice = 4.1;
+//        double minionPrice = 8.2;
+//        double truckPrice = 2;
+//        int puzzleCount = Integer.parseInt(scanner.nextLine());
+//        int toyCount = Integer.parseInt(scanner.nextLine());
+//        int bearCount = Integer.parseInt(scanner.nextLine());
+//        int miniCount = Integer.parseInt(scanner.nextLine());
+//        int truckCount = Integer.parseInt(scanner.nextLine());
+//        int allCount = toyCount + bearCount + miniCount + puzzleCount + truckCount;
+//        double totalPrice = puzzlePrice * puzzleCount + toyPrice * toyCount + bearCount * bearPrice + minionPrice * miniCount + truckCount * truckPrice;
+//        double totalPuzzle = puzzlePrice * puzzleCount;
+//        double totaltoy = toyPrice * toyCount;
+//        double totalbear = bearPrice * bearCount;
+//        double totalmini = miniCount * minionPrice;
+//        double totaltruck = truckCount * truckPrice;
+//
+//        System.out.println(totalPuzzle);
+//        System.out.println(totaltoy);
+//        System.out.println(totalbear);
+//        System.out.println(totalmini);
+//        System.out.println(totaltruck);
+//        System.out.println(totalPrice);
+
+//        if (allCount > 50) {
+//            double discount = totalPrice * 0.75;
+//            double profit = discount * 0.9;
+//            if (profit > travelPrice) {
+//                System.out.printf("Yes! %.2f lv left.", profit - travelPrice);
+//            } else {
+//                System.out.printf("Not enough money! %.2f lv needed.", Math.abs(profit - travelPrice));
+//            }
+//        } else {
+//            double profit = totalPrice * 0.9;
+//            if (profit > travelPrice) {
+//                System.out.printf("Yes! %.2f lv left.", profit - travelPrice);
+//            } else {
+//                System.out.printf("Not enough money! %.2f lv needed.", Math.abs(profit - travelPrice));
+//            }
+
+        int no = Integer.parseInt(scanner.nextLine());
+
+
         }
 
     }
-
-}
