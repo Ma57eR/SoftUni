@@ -231,5 +231,111 @@ public class Case {
 //        }
 
 
+        //-------------- 9 задача ------------------------
+
+//        String city = scanner.nextLine();
+//        double sells = Double.parseDouble(scanner.nextLine());
+//        //double comission = Double.parseDouble(scanner.nextLine());
+//
+//        switch (city) {
+//            case "Sofia":
+//                if (sells >= 0 && sells <= 500) {
+//                    System.out.printf("%.2f", sells * 0.05);
+//                } else if (sells >= 500 && sells <= 1000) {
+//                    System.out.printf("%.2f", sells * 0.07);
+//                } else if (sells >= 1000 && sells <= 10000) {
+//                    System.out.printf("%.2f", sells * 0.08);
+//                } else if (sells > 10000) {
+//                    System.out.printf("%.2f", sells * 0.12);
+//                } else {
+//                    System.out.println("error");
+//                }
+//                break;
+//            case "Varna":
+//                if (sells >= 0 && sells <= 500) {
+//                    System.out.printf("%.2f", sells * 0.045);
+//                } else if (sells >= 500 && sells <= 1000) {
+//                    System.out.printf("%.2f", sells * 0.075);
+//                } else if (sells >= 1000 && sells <= 10000) {
+//                    System.out.printf("%.2f", sells * 0.1);
+//                } else if (sells > 10000) {
+//                    System.out.printf("%.2f", sells * 0.13);
+//                }else {
+//                    System.out.println("error");
+//                }
+//                break;
+//
+//            case "Plovdiv":
+//                if (sells >= 0 && sells <= 500) {
+//                    System.out.printf("%.2f", sells * 0.055);
+//                } else if (sells >= 500 && sells <= 1000) {
+//                    System.out.printf("%.2f", sells * 0.08);
+//                } else if (sells >= 1000 && sells <= 10000) {
+//                    System.out.printf("%.2f", sells * 0.12);
+//                } else if (sells > 10000) {
+//                    System.out.printf("%.2f", sells * 0.145);
+//                }else {
+//                    System.out.println("error");
+//                }
+//                break;
+//            default:
+//                System.out.println("error");
+//        }
+
+        //-------------- 10 задача ------------------------
+
+
+        int days = Integer.parseInt(scanner.nextLine());
+        String room = scanner.nextLine();
+        String rating = scanner.nextLine();
+
+        int nights = days - 1;
+        double price;
+
+        switch (room) {
+            case "room for one person":
+                price = nights * 18;
+                //System.out.println(price);
+                if (rating.equals("positive")) {
+                    System.out.printf("%.2f", price * 1.25);
+                } else {
+                    System.out.printf("%.2f", price * 0.9);
+                }
+            break;
+            case "apartment":
+                if (days < 10) {
+                    price = nights * 25 * 0.7;
+                } else if (days <= 15) {
+                    price = nights * 25 * 0.65;
+                } else {
+                    price = nights * 25 * 0.5;
+                }
+                if (rating.equals("positive")) {
+                    System.out.printf("%.2f", price * 1.25);
+                } else {
+                    System.out.printf("%.2f", price * 0.9);
+                }
+                break;
+            case "president apartment":
+                if (days < 10) {
+                    price = nights * 35 * 0.9;
+                } else if (days <= 15) {
+                    price = nights * 35 * 0.85;
+                } else {
+                    price = nights * 35 * 0.8;
+                }if (rating.equals("positive")) {
+                System.out.printf("%.2f", price * 1.25);
+            } else {
+                System.out.printf("%.2f", price * 0.9);
+            }
+                break;
+        }
+//        System.out.println(price);
+//        if (rating.equals("positive")) {
+//            System.out.printf("%.2f", price * 0.75);
+//        } else {
+//            System.out.printf("%.2f", price * 0.9);
+//        }
+
     }
 }
