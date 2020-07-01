@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.Scanner;
 
 public class moreCases {
@@ -324,61 +323,85 @@ public class moreCases {
         //-------------------- 7 задача ------------------------
 
 
-        int n1 = Integer.parseInt(scanner.nextLine());
-        int n2 = Integer.parseInt(scanner.nextLine());
-        int result;
-        String func = scanner.nextLine();
+//        int n1 = Integer.parseInt(scanner.nextLine());
+//        int n2 = Integer.parseInt(scanner.nextLine());
+//        int result;
+//        String func = scanner.nextLine();
+//
+//        switch (func) {
+//            case "+":
+//                if (n1 + n2 % 2 == 0) {
+//                    result = (int) (n1 + n2);
+//                System.out.printf("%s + %s = %s - even", n1, n2, result);
+//            } else {
+//                    result = (int) (n1 + n2);
+//                    System.out.printf("%s + %s = %s - odd", n1, n2, result);
+//            }
+//                break;
+//            case "-":
+//                if (n1 - n2  % 2 == 0) {
+//                    result = (int) (n1 - n2);
+//                    System.out.printf("%s - %s = %s - even", n1, n2, result);
+//                } else {
+//                    result = (int) (n1 - n2);
+//                    System.out.printf("%s - %s = %s - odd", n1, n2, result);
+//                }
+//                break;
+//            case "*":
+//                if (n1 * n2  % 2 == 0) {
+//                    result = (int) (n1 * n2);
+//                    System.out.printf("%s * %s = %s - even", n1, n2, result);
+//                } else {
+//                    result = (int) (n1 * n2);
+//                    System.out.printf("%s * %s = %s - odd", n1, n2, result);
+//                }
+//                break;
+//            case "/":
+//                if (n1 != 0) {
+//                    if (n2 != 0) {
+//                        System.out.printf("%s / %s = %.2f", n1, n2, n1 / n2);
+//                    } else {
+//                        System.out.printf("Cannot divide %s by zero", n1);
+//                    }
+//                } else {
+//                    System.out.printf("Cannot divide %s by zero", n2);
+//                }
+//                break;
+//            case "%":
+//            if (n1 != 0) {
+//                if (n2 != 0) {
+//                    int result2 = (int) (n1 % n2);
+//                    char c = '%';
+//                    System.out.printf("%s %s %s = %d", n1, c, n2, result2);
+//                } else {
+//                    System.out.printf("Cannot divide %s by zero", n2);
+//                }
+//            } else {
+//                System.out.printf("Cannot divide %s by zero", n1);
+//            }
+//        }
 
-        switch (func) {
-            case "+":
-                if (n1 + n2 % 2 == 0) {
-                    result = (int) (n1 + n2);
-                System.out.printf("%s + %s = %s - even", n1, n2, result);
+
+        double income = Double.parseDouble(scanner.nextLine());
+        double grade = Double.parseDouble(scanner.nextLine());
+        double minSal = Double.parseDouble(scanner.nextLine());
+        double social = 0.35 * minSal;
+        double excell = 25 * grade;
+
+
+        if (grade < 4.5) {
+            System.out.println("You cannot get a scholarship!");
+        } else if (grade >= 4.5 && grade < 5.5) {
+            if (income < minSal) {
+                System.out.printf("You get a Social scholarship %.0f BGN", Math.floor(social));
             } else {
-                    result = (int) (n1 + n2);
-                    System.out.printf("%s + %s = %s - odd", n1, n2, result);
+                System.out.println("You cannot get a scholarship!");
             }
-                break;
-            case "-":
-                if (n1 - n2  % 2 == 0) {
-                    result = (int) (n1 - n2);
-                    System.out.printf("%s - %s = %s - even", n1, n2, result);
-                } else {
-                    result = (int) (n1 - n2);
-                    System.out.printf("%s - %s = %s - odd", n1, n2, result);
-                }
-                break;
-            case "*":
-                if (n1 * n2  % 2 == 0) {
-                    result = (int) (n1 * n2);
-                    System.out.printf("%s * %s = %s - even", n1, n2, result);
-                } else {
-                    result = (int) (n1 * n2);
-                    System.out.printf("%s * %s = %s - odd", n1, n2, result);
-                }
-                break;
-            case "/":
-                if (n1 != 0) {
-                    if (n2 != 0) {
-                        System.out.printf("%s / %s = %.2f", n1, n2, n1 / n2);
-                    } else {
-                        System.out.printf("Cannot divide %s by zero", n1);
-                    }
-                } else {
-                    System.out.printf("Cannot divide %s by zero", n2);
-                }
-                break;
-            case "%":
-            if (n1 != 0) {
-                if (n2 != 0) {
-                    int result2 = (int) (n1 % n2);
-                    char c = '%';
-                    System.out.printf("%s %s %s = %d", n1, c, n2, result2);
-                } else {
-                    System.out.printf("Cannot divide %s by zero", n2);
-                }
+        } else if (grade >= 5.50) {
+            if (social > excell && income < minSal) {
+                System.out.printf("You get a Social scholarship %.0f BGN", Math.floor(social));
             } else {
-                System.out.printf("Cannot divide %s by zero", n1);
+                System.out.printf("You get a scholarship for excellent results %.0f BGN", Math.floor(excell));
             }
         }
 
