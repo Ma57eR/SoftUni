@@ -290,46 +290,47 @@ public class Case {
         String rating = scanner.nextLine();
 
         int nights = days - 1;
-        double price;
-
-        switch (room) {
-            case "room for one person":
-                price = nights * 18;
-                //System.out.println(price);
-                if (rating.equals("positive")) {
-                    System.out.printf("%.2f", price * 1.25);
-                } else {
-                    System.out.printf("%.2f", price * 0.9);
-                }
-            break;
-            case "apartment":
-                if (days < 10) {
-                    price = nights * 25 * 0.7;
-                } else if (days <= 15) {
-                    price = nights * 25 * 0.65;
-                } else {
-                    price = nights * 25 * 0.5;
-                }
-                if (rating.equals("positive")) {
-                    System.out.printf("%.2f", price * 1.25);
-                } else {
-                    System.out.printf("%.2f", price * 0.9);
-                }
-                break;
-            case "president apartment":
-                if (days < 10) {
-                    price = nights * 35 * 0.9;
-                } else if (days <= 15) {
-                    price = nights * 35 * 0.85;
-                } else {
-                    price = nights * 35 * 0.8;
-                }if (rating.equals("positive")) {
-                System.out.printf("%.2f", price * 1.25);
-            } else {
-                System.out.printf("%.2f", price * 0.9);
-            }
-                break;
-        }
+        double price = 0;
+//
+//        switch (room) {
+//            case "room for one person":
+//                price = nights * 18;
+//                //System.out.println(price);
+//                if (rating.equals("positive")) {
+//                    System.out.printf("%.2f", price * 1.25);
+//                } else {
+//                    System.out.printf("%.2f", price * 0.9);
+//                    
+//                }
+//            break;
+//            case "apartment":
+//                if (days < 10) {
+//                    price = nights * 25 * 0.7;
+//                } else if (days <= 15) {
+//                    price = nights * 25 * 0.65;
+//                } else {
+//                    price = nights * 25 * 0.5;
+//                }
+//                if (rating.equals("positive")) {
+//                    System.out.printf("%.2f", price * 1.25);
+//                } else {
+//                    System.out.printf("%.2f", price * 0.9);
+//                }
+//                break;
+//            case "president apartment":
+//                if (days < 10) {
+//                    price = nights * 35 * 0.9;
+//                } else if (days <= 15) {
+//                    price = nights * 35 * 0.85;
+//                } else {
+//                    price = nights * 35 * 0.8;
+//                }if (rating.equals("positive")) {
+//                System.out.printf("%.2f", price * 1.25);
+//            } else {
+//                System.out.printf("%.2f", price * 0.9);
+//            }
+//                break;
+//        }
 //        System.out.println(price);
 //        if (rating.equals("positive")) {
 //            System.out.printf("%.2f", price * 0.75);
@@ -337,5 +338,16 @@ public class Case {
 //            System.out.printf("%.2f", price * 0.9);
 //        }
 
+        switch (room) {
+            case "single":
+                price = nights * 10;
+                if (nights > 5) {
+                    price += nights * 5;
+
+                }
+                break;
+
+        }
+        System.out.println(price);
     }
 }
